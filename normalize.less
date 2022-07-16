@@ -1,0 +1,67 @@
+:root {
+	/* Appbar */
+	--f7-appbar-height: 54px;
+	--f7-appbar-inner-padding-left: 1rem;
+	--f7-appbar-inner-padding-right: 1rem;
+
+	/* Navbar */
+	--f7-navbar-height: 48px;
+	--f7-navbar-inner-padding-right: 1rem;
+	--f7-navbar-inner-padding-left: 1rem;
+
+	/* Toolbar */
+	--f7-toolbar-height: 50px;
+	--f7-tabbar-label-font-size: 10px;
+
+	/* Subnavbar */
+	--f7-subnavbar-height: 48px;
+	--f7-subnavbar-inner-padding-left: 1rem;
+	--f7-subnavbar-inner-padding-right: 1rem;
+
+	/* Searchbar */
+	--f7-searchbar-inner-padding-left: 16px;
+	--f7-searchbar-inner-padding-right: 16px;
+	--f7-searchbar-backdrop-bg-color: transparent;
+	--f7-searchbar-input-bg-color: rgba(0, 0, 0, 0.1);
+
+	/* Button */
+	--f7-button-border-radius: 8px;
+
+	/* List */
+	--f7-list-media-item-padding-vertical: 10px;
+	--f7-list-font-size: 15px;
+	--f7-list-item-title-font-size: 15px;
+}
+
+:root.dark {
+	--f7-searchbar-input-bg-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Fix for icon only */
+.navbar .left a.icon-only {
+	margin-left: -8px;
+}
+
+.navbar .right a.icon-only {
+	margin-right: -8px;
+}
+
+/* Hack to have a nice subnavbar translucent backgrounds */
+.navbar.with-subnavbar {
+	.navbar-bg {
+		height: calc(100% + var(--f7-subnavbar-height));
+	}
+
+	.subnavbar {
+		background: transparent;
+		backdrop-filter: blur(0px);
+	}
+
+	.searchbar {
+		backdrop-filter: blur(0px);
+	}
+}
+
+.page-content .block:first-child {
+	margin-top: 12px;
+}
